@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kj.tdd.tddTest.mapper.StudentMapper">
+    <resultMap type="com.kj.tdd.tddTest.domain.Student" id="studentMap">
+        <id property="id" column="id"/>
+        <result property="name" column="name" />
+        <result property="sex" column="sex" />
+        <result property="age" column="age" />
+    </resultMap>
+
+   <!-- <select id="getStudent" resultType="com.kj.tdd.tddTest.domain.Student">
+        select * from student where id = #{id}
+    </select>-->
+
+   <!-- <select id="listStudent" resultMap="studentMap">
+        select * from student limit #{pageSize} offset #{index}
+    </select>-->
+
+</mapper>
