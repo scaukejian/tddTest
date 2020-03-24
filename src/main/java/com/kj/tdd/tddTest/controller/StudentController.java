@@ -41,7 +41,8 @@ public class StudentController {
     @GetMapping(value = "/getStudent")
     @ApiOperation("获取学生信息")
     public ResultDTO<Student> getStudent(@ApiParam(value = "学生id") @RequestParam("id") Long id) {
-        return studentFeignClient.getStudent(id);
+        Student student = studentService.getStudent(id);
+        return ResultDTO.ok(student);
     }
 
     @DeleteMapping(value = "/deleteStudent/{id}")

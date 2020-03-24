@@ -47,9 +47,13 @@ dependencies {
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
 	//注册eureka客户端服务
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client'
-	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign'
-
+	//feign客户端
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.7.RELEASE'
+	//操作excel文件
+	compile 'org.apache.poi:poi:3.17'
+	compile 'org.apache.poi:poi-ooxml:3.17'
 }
+
 
 //管理spring cloud版本依赖
 dependencyManagement {
