@@ -34,14 +34,14 @@ public class StudentServiceImplTest {
     private StudentServiceImpl studentService = new StudentServiceImpl();
     @Mock
     private StudentMapper studentMapper;
-    @Autowired
-    //@Mock
+    //@Autowired
+    @Mock
     RedisUtil redisUtil;
-    @Autowired
-    //@InjectMocks
+    //@Autowired
+    @InjectMocks
     RedisTemplate redisTemplate;
-    //@Mock
-    //ValueOperations valueOperations; //redisTemplate需要依赖ValueOperations，如果不启用spring注入RedisTemplate，则需要使用Mock注解注入
+    @Mock
+    ValueOperations valueOperations; //redisTemplate需要依赖ValueOperations，如果不启用spring注入RedisTemplate，则需要使用Mock注解注入
 
     @Before
     public void setUp1() throws Exception {
