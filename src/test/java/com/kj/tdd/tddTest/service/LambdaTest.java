@@ -137,7 +137,7 @@ public class LambdaTest {
         //System.out.println(students);
         System.out.println(students.size());
 
-        //=====================安全写法=================
+        //=====================线程安全写法=================
         List<Student> studentList = integerList.parallelStream().map(i -> {
             student.setAge(i);
             return student;
