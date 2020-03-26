@@ -20,7 +20,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * 11、euraka:服务的注册和发现 @EnableEurekaServer @EnableDiscoveryClient
  * 12、feign:在SpringBoot启动类加上@EnableFeignClients,创建feign远程调用接口和回调函数
  *
- * 13、lambda: 函数式接口和集合流操作（并发线程安全） // https://blog.csdn.net/Mr_dsw/article/details/83183270
+ * 13、lambda: 函数式接口和集合流操作（并发线程安全） // https://www.cnblogs.com/aiqiqi/p/11004208.html
  * 14、task
  * 15、logback
  *

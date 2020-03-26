@@ -1,5 +1,7 @@
 package com.kj.tdd.tddTest.utils;
 
+import org.springframework.cglib.core.Local;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -49,5 +51,18 @@ public class DateUtil {
 
     public static DateTimeFormatter getDateTimeFormatter(String pattern) {
         return DateTimeFormatter.ofPattern(pattern);
+    }
+
+    public static void main(String[] args) throws Exception{
+        String str = "2020-10-19 12:22:23";
+        String pattern = "yyyy-MM-dd HH:mm:ss";
+        //日期格式化
+        System.out.println(formatDate(new Date(), pattern));
+        System.out.println(formatLocalDate(LocalDate.now(), pattern.substring(0, 10)));
+        System.out.println(formatLocalDateTime(LocalDateTime.now(), pattern));
+        //时间字符串转日期
+        System.out.println(parseDate(str, pattern));
+        System.out.println(parseLocalDate(str.substring(0, 10), pattern.substring(0, 10)));
+        System.out.println(parseLocalDateTime(str, pattern));
     }
 }
